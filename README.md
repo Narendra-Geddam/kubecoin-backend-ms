@@ -65,3 +65,9 @@ gunicorn -w 2 -b 0.0.0.0:5000 app:app
 - Flask-CORS
 - Psycopg2
 - Gunicorn
+
+## CI/CD Note
+
+- Jenkins pipelines build and push Docker images using the Jenkins credential `docker-creds`.
+- Helm image values are updated from CI and pushed back to Git using `git-creds`.
+- Image updates target `kubecoin-helm-charts/kubecoin/values.yaml`.
