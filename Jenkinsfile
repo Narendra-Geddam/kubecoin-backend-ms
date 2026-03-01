@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS = 'docker-creds'
         GIT_CREDENTIALS = 'git-creds'
-        DOCKER_REGISTRY = 'your-private-registry.example.com'
+        DOCKER_REGISTRY = 'privatergistry'
 
         IMAGE_NAME = 'kubecoin-backend'
         IMAGE_REPOSITORY = "${DOCKER_REGISTRY}/${IMAGE_NAME}"
